@@ -1,0 +1,4 @@
+# dsh-qqbridge bundle patch：把 HTTP 桥插件挂进 profile 配置树。
+- insert:
+    - id: dsh-qqbridge
+      name: dsh-qqbridge

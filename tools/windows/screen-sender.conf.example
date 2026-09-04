@@ -1,0 +1,6 @@
+# 复制为 screen-sender.conf（与脚本同目录）并填入真实值。
+# 该文件已被 .gitignore 忽略，绝不提交（含服务器地址与 token）。
+# 服务器地址（必填；仓库不写死公网地址）：
+SERVER_URL=https://<你的服务器域名或IP>:63000
+# 上传鉴权 token（在服务器 /srv/astrbot/data/config/astrbot_screen_watch_config.json 的 upload_token）：
+UPLOAD_TOKEN=CHANGE_ME_REAL_TOKEN

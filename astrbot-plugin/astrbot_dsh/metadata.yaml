@@ -1,0 +1,5 @@
+name: astrbot_dsh
+desc: DSH 桥：/dsh 只读与管理 agent、会话/任务/审批/订阅、桥推送端点（与 astrbot_router 分插件）
+version: 0.2.0
+author: koawa
+repo: https://github.com/Koawa265Richard31/YuukaKarenina_Agent

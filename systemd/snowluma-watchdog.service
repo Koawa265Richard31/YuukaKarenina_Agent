@@ -1,0 +1,5 @@
+[Unit]
+Description=SnowLuma screen capture + online status
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/snowluma-watchdog.sh

@@ -1,0 +1,8 @@
+[Unit]
+Description=SnowLuma status/QR refresh
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=5s
+AccuracySec=2s
+[Install]
+WantedBy=timers.target

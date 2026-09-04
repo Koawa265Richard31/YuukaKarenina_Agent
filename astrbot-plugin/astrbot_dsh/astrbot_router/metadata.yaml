@@ -1,0 +1,5 @@
+name: astrbot_router
+desc: 自定义路由指令：/chatmode /character /status /help（人格卡/模型切换/限流/卡片转纯文本）
+version: 0.1.0
+author: koawa
+repo: https://github.com/Koawa265Richard31/YuukaKarenina_Agent

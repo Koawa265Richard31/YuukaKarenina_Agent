@@ -1,0 +1,16 @@
+[Unit]
+Description=DSH AstrBot bridge (read-only profile)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dshqq
+WorkingDirectory=/var/lib/dsh-qqbridge
+EnvironmentFile=/srv/dsh-qqbridge.env
+ExecStart=/usr/local/bin/node /srv/dsh/node_modules/@deepseek-ai/dsh/lib/bin.js --profile qqbridge
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

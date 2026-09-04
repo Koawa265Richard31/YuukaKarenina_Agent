@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"><title>SnowLuma QQ 扫码</title>
+<style>body{background:#111;color:#eee;font-family:sans-serif;display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:24px}h1{font-size:18px;margin:0}.st{font-size:14px;color:#9f9}.st.bad{color:#f66}img{max-width:min(92vw,640px);border:2px solid #444;border-radius:8px}</style></head>
+<body>
+<h1>SnowLuma QQ 登录二维码</h1>
+<div class="st" id="st">加载中…</div>
+<img id="q" src="/snowluma-qr.png" alt="QR">
+<script>
+async function poll(){try{
+  const s=await (await fetch('/snowluma-status.json',{cache:'no-store'})).json();
+  document.getElementById('st').textContent=s.qq_online?'🟢 QQ 已登录（无需扫码）':'🔴 等待扫码登录（'+s.time+'）';
+  document.getElementById('st').className='st'+(s.qq_online?'':' bad');
+}catch(e){document.getElementById('st').textContent='状态不可用'} }
+setInterval(()=>{document.getElementById('q').src='/snowluma-qr.png?t='+Date.now()},5000);
+poll();setInterval(poll,5000);
+</script></body></html>

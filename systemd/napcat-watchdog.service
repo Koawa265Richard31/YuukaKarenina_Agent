@@ -1,0 +1,10 @@
+[Unit]
+Description=NapCat offline watchdog (restart + notify)
+After=docker.service
+Wants=docker.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/srv/astrbot.env
+EnvironmentFile=/srv/dsh-qqbridge.env
+ExecStart=/usr/local/bin/napcat-watchdog.sh

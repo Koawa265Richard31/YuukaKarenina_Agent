@@ -1,0 +1,52 @@
+{
+  "whitelist_qq": {
+    "description": "白名单 QQ（逗号分隔）；优先读环境变量 DSH_WHITELIST_QQ",
+    "type": "list",
+    "default": []
+  },
+  "admin_qq": {
+    "description": "唯一管理员 QQ；优先读环境变量 DSH_ADMIN_QQ",
+    "type": "string",
+    "default": ""
+  },
+  "admin_username": {
+    "description": "管理员用户名（展示用）",
+    "type": "string",
+    "default": "admin"
+  },
+  "admin_password_hash": {
+    "description": "管理员密码 bcrypt 哈希（不存明文）",
+    "type": "string",
+    "default": ""
+  },
+  "readonly_bridge_url": {
+    "description": "只读桥地址",
+    "type": "string",
+    "default": "http://127.0.0.1:63002"
+  },
+  "admin_bridge_url": {
+    "description": "管理员桥地址",
+    "type": "string",
+    "default": "http://127.0.0.1:63003"
+  },
+  "bridge_token": {
+    "description": "桥鉴权 token（与两桥 env 一致）",
+    "type": "string",
+    "default": ""
+  },
+  "auth_ttl_days": {
+    "description": "管理员登录有效期（天）",
+    "type": "int",
+    "default": 7
+  },
+  "max_login_tries": {
+    "description": "登录失败最大次数",
+    "type": "int",
+    "default": 5
+  },
+  "bridge_port": {
+    "description": "插件推送端点端口",
+    "type": "int",
+    "default": 6200
+  }
+}

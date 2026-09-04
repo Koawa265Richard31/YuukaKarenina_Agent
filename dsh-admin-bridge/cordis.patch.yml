@@ -1,0 +1,4 @@
+# dsh-admin-bridge bundle patch
+- insert:
+    - id: dsh-admin-bridge
+      name: dsh-admin-bridge

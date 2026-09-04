@@ -1,0 +1,65 @@
+{
+  "chat_default_model": {
+    "description": "聊天默认模型",
+    "type": "string",
+    "default": "glm-5.3-flash"
+  },
+  "chat_models": {
+    "description": "可切换的聊天模型列表（仅 opencode.ai 实测可用的模型）",
+    "type": "list",
+    "default": [
+      "glm-5.3-flash",
+      "glm-5.1",
+      "glm-5.2",
+      "glm-5.3",
+      "kimi-k3",
+      "kimi-k2.6",
+      "kimi-k2.7-code"
+    ]
+  },
+  "rate_limit_window": {
+    "description": "限流窗口（秒），0=不限",
+    "type": "int",
+    "default": 60
+  },
+  "rate_limit_max": {
+    "description": "窗口内最大消息数，0=不限",
+    "type": "int",
+    "default": 20
+  },
+  "persona_owners": {
+    "description": "人格卡所有权映射 {\"卡名\": \"QQ\"}（示例值部署后填，勿留真实 QQ）",
+    "type": "string",
+    "default": "{}"
+  },
+  "intercept_persona": {
+    "description": "接管 astrbot 内置 /persona 指令（禁用内置，由本插件实现权限拦截），true=接管",
+    "type": "bool",
+    "default": true
+  },
+  "draw_model": {
+    "description": "生图模型（朋友反代 /images/generations）",
+    "type": "string",
+    "default": "doubao-seedream-4-0-250828"
+  },
+  "draw_base_url": {
+    "description": "AI 生图反代 base URL（示例 http://<proxy>:3000/v1，部署后填）",
+    "type": "string",
+    "default": ""
+  },
+  "draw_size": {
+    "description": "生图尺寸",
+    "type": "string",
+    "default": "1024x1024"
+  },
+  "intercept_provider": {
+    "description": "接管 astrbot 内置 /provider 指令（供应商权限矩阵：DS 官方仅所有者+管理员可见可切），true=接管",
+    "type": "bool",
+    "default": true
+  },
+  "ds_provider_owner": {
+    "description": "DS 官方供应商的归属 QQ（仅此 QQ + 管理员双条件满足时可见/可切换 DS 官方供应商）",
+    "type": "string",
+    "default": ""
+  }
+}

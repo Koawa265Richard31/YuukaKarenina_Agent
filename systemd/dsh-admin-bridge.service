@@ -1,0 +1,16 @@
+[Unit]
+Description=DSH admin bridge (shared /root/.dsh)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/srv/dsh
+EnvironmentFile=/srv/dsh-admin-bridge.env
+ExecStart=/usr/local/bin/node /srv/dsh/node_modules/@deepseek-ai/dsh/lib/bin.js --profile admin-bridge
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

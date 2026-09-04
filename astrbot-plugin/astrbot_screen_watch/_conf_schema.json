@@ -1,0 +1,52 @@
+{
+  "upload_token": {
+    "description": "Windows 端上传截图的鉴权 token（两端保持一致）",
+    "type": "string",
+    "default": ""
+  },
+  "target_qq": {
+    "description": "主动推送的目标 QQ 号（必填，部署后在面板/配置里填）",
+    "type": "string",
+    "default": ""
+  },
+  "http_port": {
+    "description": "接收截图的本机 HTTP 端口（nginx 反代到公网）",
+    "type": "int",
+    "default": 6201
+  },
+  "min_active_interval": {
+    "description": "两次主动开口的最小间隔（秒），防打扰",
+    "type": "int",
+    "default": 1500
+  },
+  "static_reply_prob": {
+    "description": "画面长时间无变化时，bot 主动搭话的概率（0~1，可随时调），命中后由 LLM 基于观察自然生成",
+    "type": "float",
+    "default": 0.3
+  },
+  "passive_cooldown": {
+    "description": "被动截图触发冷却（秒）：刚主动看过画面后，此时间内到达的被动截图跳过，避免重复触发",
+    "type": "int",
+    "default": 10
+  },
+  "active_trigger": {
+    "description": "主动/工具拉图时的触发语（user 消息文本，图随消息直发）",
+    "type": "text",
+    "default": "优香，这是我设备当前的界面，你看看~"
+  },
+  "passive_trigger": {
+    "description": "被动截图时的触发语（含 JSON 判断指令，图随消息直发）",
+    "type": "text",
+    "default": "（这是我设备当前界面的截图。先看画面：如果只是普通日常、没有值得主动说的内容，只输出 JSON {\"skip\": true, \"desc\": \"画面一句话描述\"}；如果有值得注意或值得回应的地方，输出 JSON {\"reply\": \"以优香语气自然回应的内容\"}。只输出 JSON。）优香，我设备当前界面，你看看~"
+  },
+  "pending_ttl": {
+    "description": "拉图请求有效期（秒），超时清理",
+    "type": "int",
+    "default": 60
+  },
+  "history_limit": {
+    "description": "组装 Yuuka 会话时取最近多少条历史",
+    "type": "int",
+    "default": 8
+  }
+}

@@ -1,0 +1,7 @@
+[Unit]
+Description=bot 记忆备份：GitHub(Yuuka-memory) + 坚果云 WebDAV 双备份
+
+[Service]
+Type=oneshot
+EnvironmentFile=/srv/astrbot-backup.env
+ExecStart=/srv/YuukaKarenina_Agent/tools/backup-astrbot.sh

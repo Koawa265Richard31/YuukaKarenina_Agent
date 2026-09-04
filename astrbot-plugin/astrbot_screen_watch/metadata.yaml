@@ -1,0 +1,5 @@
+name: astrbot_screen_watch
+desc: Windows 屏幕监控：接收用户电脑截图，vision 模型判断是否有值得主动开口的变化，主动推送 QQ
+version: 0.1.0
+author: koawa
+repo: https://github.com/Koawa265Richard31/dsh-astrbot-bridge
